@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenzo</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="crud"></div>
+            <!-- create head part -->
+    <div class="head">
+        <div>
+            <img src="./img/Logo.png">
+            <h2>Product Management System</h2>
+        </div>
+    </div>
+        <!-- create inputs part -->
+    <div class="inputs">
+        <input type="text" id="title" placeholder="Title">
+        <div class="price"> 
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+            <small id="total"></small>
+        </div>
+            <input placeholder="Count" type="text" id="count">
+            <input placeholder="Category" type="text" id="category">
+            <button id="submit">Create</button> 
+    </div>
+            <!-- create outputs part -->
+
+    <div class="outputs">   
+    <div class="searchblock">
+        <input type="text" id="search" placeholder="Search">
+        <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="SearchTitle">Search By Title</button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- table part -->
+<div id="deleteAll">
+
+</div>    
+<table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>
